@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Perfil Usuario
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-avatar item-start>
+          <img [src]="base64Image">
+        </ion-avatar>
+        <h2>Alvaro Lotero</h2>
+        <p>@AlvaroSalazar</p>
+     </ion-item>
+     
+     <ion-item>
+        <ion-icon name="logo-twitter" item-start></ion-icon>
+        Seguidores
+        <ion-badge item-end>965</ion-badge>
+      </ion-item>
+
+      <ion-item>
+          <ion-icon name="logo-twitter" item-start></ion-icon>
+          Siguiendo
+          <ion-badge item-end>1.095</ion-badge>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="logo-twitter" item-start></ion-icon>
+            Twits
+            <ion-badge item-end>540</ion-badge>
+          </ion-item>
+
+        
+      <button ion-button (click)="takePicture()">Tomar foto</button>
+      
+      <ion-slides pager>
+          <ion-slide *ngFor="let img of listImgs">
+              <img [src]="img.name">
+            </ion-slide>
+      </ion-slides> 
+
+  
+
+
+</ion-content>
